@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="date.cpp" />
     <ClCompile Include="Пеннер 2 пр.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="date.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,14 +3,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+#include "date.h"
 using namespace std;
 
-struct Date {
-    int year;
-    int month;
-    int day;
-};
 
 struct Income {
     Date date;
@@ -43,7 +38,9 @@ int main() {
     file.close();
 
     for (const Income& obj : objects) {
-        cout << "Date: " << obj.date.year << "." << obj.date.month << "." << obj.date.day << endl;
+        cout << "Date: ";
+        obj.date.print();
+       
         cout << "Source: " << obj.source << endl;
         cout << "Sum: " << obj.summ << " rubles" << endl;
         cout << endl;
