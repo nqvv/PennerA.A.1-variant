@@ -3,15 +3,11 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
 #include "date.h"
+#include "income.h"
+
 using namespace std;
-
-
-struct Income {
-    Date date;
-    string source;
-    int summ;
-};
 
 int main() {
     setlocale(LC_ALL, "Ru");
@@ -22,33 +18,12 @@ int main() {
         cerr << "cant open file" << endl;
         return 1;
     }
+   
+    while (!file.eof())
+        objects.push_back(Income::read(file));
 
-    string line;
-    while (getline(file, line)) {
-        Income obj;
-        istringstream iss(line);
-
-        char dot;
-        iss >> obj.date.year >> dot >> obj.date.month >> dot >> obj.date.day;
-        iss >> obj.source >> obj.summ;
-
-        objects.push_back(obj);
-    }
-
-    file.close();
-
-    for (const Income& obj : objects) {
-        cout << "Date: ";
-        obj.date.print();
-       
-        cout << "Source: " << obj.source << endl;
-        cout << "Sum: " << obj.summ << " rubles" << endl;
-        cout << endl;
-    }
-
+    for (const Income& obj : objects)
+        obj.print();
+ 
     return 0;
 }
-
-
-
-

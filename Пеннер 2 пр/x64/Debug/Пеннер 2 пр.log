@@ -1,6 +1,2 @@
-﻿  date.cpp
-  Пеннер 2 пр.cpp
-C:\Users\HP\source\repos\Пеннер 2 пр\Пеннер 2 пр\Пеннер 2 пр.cpp(42,24): error C2662: void Date::print(void): невозможно преобразовать указатель "this" из "const Date" в "Date &"
-C:\Users\HP\source\repos\Пеннер 2 пр\Пеннер 2 пр\Пеннер 2 пр.cpp(42,12): message : В результате преобразования теряются квалификаторы
-C:\Users\HP\source\repos\Пеннер 2 пр\Пеннер 2 пр\date.h(8,14): message : см. объявление "Date::print"
-  Создание кода...
+﻿  Пеннер 2 пр.cpp
+  Пеннер 2 пр.vcxproj -> C:\Users\HP\source\repos\PennerA.A.1-variant\x64\Debug\Пеннер 2 пр.exe

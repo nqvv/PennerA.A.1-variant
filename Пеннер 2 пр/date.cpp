@@ -2,7 +2,15 @@
 
 #include "date.h"
 
-void Date::print()
+void Date::print(std::ostream& ost) const
 {
-	std::cout << day << "." << month << "." << year;
+	ost << day << "." << month << "." << year << std::endl;
+}
+
+Date Date::read(std::istream& ist)
+{
+	Date date;
+	char dot;
+	ist >> date.year >> dot >> date.month >> dot >> date.day;
+	return date;
 }

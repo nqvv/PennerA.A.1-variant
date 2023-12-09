@@ -1,10 +1,13 @@
 #pragma once
 
-    struct Date {
-        int year;
-        int month;
-        int day;
+#include <iostream>
+
+struct Date {
+    int year;
+    int month;
+    int day;
         
-        void print();
-    };
+    void print(std::ostream& ost = std::cout) const;
+    static Date read(std::istream& ist);
+};
 
