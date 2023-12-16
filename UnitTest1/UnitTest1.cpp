@@ -35,7 +35,7 @@ namespace UnitTest1
 		{
 			std::vector<std::string> Cases
 			{
-				"10.12.2023",
+				"10-12.2023",
 				"ab.cd.df",
 				"Hello"
 
